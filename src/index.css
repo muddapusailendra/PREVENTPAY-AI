@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0B0F17;
+    --foreground: #F8FAFC;
+    --card: #131B2E;
+    --card-foreground: #F8FAFC;
+    --popover: #131B2E;
+    --popover-foreground: #F8FAFC;
+    --primary: #10B981;
+    --primary-foreground: #000000;
+    --secondary: #1A253D;
+    --secondary-foreground: #F8FAFC;
+    --muted: #1A253D;
+    --muted-foreground: #94A3B8;
+    --accent: #1A253D;
+    --accent-foreground: #F8FAFC;
+    --destructive: #EF4444;
+    --border: #23304D;
+    --input: #23304D;
+    --ring: #10B981;
+    --chart-1: #10B981;
+    --chart-2: #3B82F6;
+    --chart-3: #F59E0B;
+    --chart-4: #8B5CF6;
+    --sidebar: #080C14;
+    --sidebar-foreground: #F8FAFC;
+    --sidebar-primary: #10B981;
+    --sidebar-primary-foreground: #000000;
+    --sidebar-accent: #131B2E;
+    --sidebar-accent-foreground: #F8FAFC;
+    --sidebar-border: #23304D;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-background { background-color: #0B0F17; }
+  .text-foreground { color: #F8FAFC; }
+  .bg-sidebar { background-color: #080C14; }
+  .border-sidebar-border { border-color: #23304D; }
+  .text-sidebar-foreground { color: #F8FAFC; }
+  .bg-sidebar-accent { background-color: #131B2E; }
+  .bg-sidebar-primary { background-color: #10B981; }
+  .text-sidebar-primary-foreground { color: #000000; }
+  .bg-card { background-color: #131B2E; }
+  .border-border { border-color: #23304D; }
+  .text-muted-foreground { color: #94A3B8; }
+  .bg-muted { background-color: #1A253D; }
+  .bg-primary { background-color: #10B981; }
+  .text-primary { color: #10B981; }
+  .text-primary-foreground { color: #000000; }
+  .text-chart-1 { color: #10B981; }
+  .text-chart-2 { color: #3B82F6; }
+  .text-chart-3 { color: #F59E0B; }
+  .text-chart-4 { color: #8B5CF6; }
+  .bg-chart-1 { background-color: #10B981; }
+  .bg-chart-2 { background-color: #3B82F6; }
+  .bg-chart-3 { background-color: #F59E0B; }
+  .bg-chart-4 { background-color: #8B5CF6; }
+  .stroke-chart-1 { stroke: #10B981; }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #23304D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10B981;
+}
+
+/* Smooth Fade Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
